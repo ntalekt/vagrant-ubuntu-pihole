@@ -9,6 +9,7 @@ Vagrant.configure("2") do |config|
   #  Provider (esxi) settings
   #
   config.vm.provider :vmware_esxi do |esxi|
+    # https://github.com/tcnksm/vagrant-secret
     esxi.esxi_hostname = Secret.esxi_hostname
     esxi.esxi_username = Secret.esxi_username
     esxi.esxi_password = Secret.esxi_password
@@ -18,10 +19,11 @@ Vagrant.configure("2") do |config|
     esxi.guest_name = NAME
     esxi.guest_memsize = '1024'
     esxi.guest_numvcpus = '1'
-    esxi.guest_boot_disk_size = 30
+    #esxi.guest_boot_disk_size = 30
   end
 
-  config.vm.synced_folder '.', '/vagrant', type: 'nfs', disabled: true
+  # Rsync the current directory and mount to /vagrant on the VM
+  config.vm.synced_folder('.', '/vagrant', type: 'rsync')
 
   args = []
   config.vm.provision "apt-get update/upgrade script", type: "shell",
