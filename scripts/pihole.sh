@@ -52,7 +52,7 @@ pihole restartdns
 echo -e "\e[33m**********\e[39mEnd rsync hosts\e[33m**********\e[39m"
 
 # configure the motd.
-# NB this was generated at http://patorjk.com/software/taag/#p=display&f=Big&t=pihole%0Aserver.
+# NB this was generated at http://patorjk.com/software/taag/#p=display&f=Star%20Wars&t=pihole%0Aserver.
 cat > /etc/motd <<'EOF'
 .______    __   __    __    ______    __       _______
 |   _  \  |  | |  |  |  |  /  __  \  |  |     |   ____|
