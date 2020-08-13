@@ -1,15 +1,17 @@
 # vagrant-ubuntu-pihole
 
-A simple Vagrantfile to setup Ubuntu server with Pi-hole on ESXi. 
+A simple Vagrantfile to setup Ubuntu server with Pi-hole on ESXi.
 
-### Installs
+## Installs
 
 * My public dotfiles
 * Pi-hole (latest release)
 
-### Usage
+## Usage
+
 * Requires - <https://github.com/josenk/vagrant-vmware-esxi>
-```
+
+```bash
 vagrant up
 vagrant destroy -f
 ```
