@@ -1,11 +1,14 @@
 # vagrant-ubuntu-pihole
 
-A simple Vagrantfile to setup Ubuntu server with Pi-hole on ESXi.
+A simple Vagrantfile to setup Ubuntu 18.04 server with Pi-hole on ESXi.
 
 ## Installs
 
-* My public dotfiles
 * Pi-hole (latest release)
+* NUT client (UPS monitoring)
+* My public dotfiles
+* VMware Tools
+* Netplan config
 
 ## Usage
 
